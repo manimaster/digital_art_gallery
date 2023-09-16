@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Art Gallery</title>
+</head>
+<body>
+    <h1>Welcome to the Art Gallery</h1>
+    <ul>
+        {% for artwork in artworks %}
+            <li>
+                <h2>{{ artwork.title }} by {{ artwork.artist }}</h2>
+                <p>Description: {{ artwork.description }}</p>
+                <p>Current Bid: ${{ artwork.current_bid }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

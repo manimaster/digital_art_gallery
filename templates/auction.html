@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Auction Details</title>
+</head>
+<body>
+    <h1>Auction Details for {{ artwork.title }}</h1>
+    <p><strong>Artist:</strong> {{ artwork.artist }}</p>
+    <p><strong>Description:</strong> {{ artwork.description }}</p>
+    <p><strong>Current Bid:</strong> ${{ artwork.current_bid }}</p>
+    <h2>Place Your Bid</h2>
+    <form action="/place_bid/{{ artwork.title }}" method="POST">
+        <label for="bid_amount">Bid Amount:</label>
+        <input type="number" name="bid_amount" id="bid_amount" required>
+        <button type="submit">Place Bid</button>
+    </form>
+</body>
+</html>
